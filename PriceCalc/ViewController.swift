@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var itemPrice: UITextField!
     @IBOutlet weak var itemWeight: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var calculateButton: UIButton!
     
-
     
     @IBAction func calculateValue(_ sender: UIButton) {
         resultLabel.text = model.getValue(price: Float32(itemPrice.text!)!, weight: Float32(itemWeight.text!)!)
@@ -24,6 +24,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        calculateButton.layer.cornerRadius = 10
+        calculateButton.clipsToBounds = true
+
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -73,14 +77,3 @@ extension ViewController: UITextFieldDelegate {
     
 //    textF
 }
-
-//if textField == userTextField[0] {
-//    textField.resignFirstResponder()
-//    userTextField[1].becomeFirstResponder()
-//} else if textField == userTextField[1] {
-//    textField.resignFirstResponder()
-//    if dataMethods.emailPasswordCheckOnEmpty(userTextField[1].text!) {
-//        performAction()
-//    }
-//}
-//return false

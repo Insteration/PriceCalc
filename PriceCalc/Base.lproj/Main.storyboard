@@ -18,56 +18,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM0-Rm-jh0">
-                                <rect key="frame" x="172" y="318" width="31" height="30"/>
-                                <state key="normal" title="Calc"/>
-                                <connections>
-                                    <action selector="calculateValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhL-Dc-wzE"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZS-PW-BD7">
-                                <rect key="frame" x="166" y="554" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-4S-Fyd">
-                                <rect key="frame" x="139" y="242" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7a3-Aw-ElI">
+                                <rect key="frame" x="77" y="280" width="220" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="VQW-T0-ixr"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7a3-Aw-ElI">
-                                <rect key="frame" x="139" y="280" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Vp7-ec-3Rf"/>
+                                    <constraint firstAttribute="height" constant="30" id="iSl-zX-gpF"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM0-Rm-jh0">
+                                <rect key="frame" x="77" y="318" width="222" height="30"/>
+                                <color key="backgroundColor" red="0.74005955457687378" green="0.80838888883590698" blue="0.93579632043838501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4vl-f4-JoW"/>
+                                </constraints>
+                                <color key="tintColor" red="0.92878693342208862" green="0.94462335109710693" blue="0.97779244184494019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Calc"/>
+                                <connections>
+                                    <action selector="calculateValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhL-Dc-wzE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZS-PW-BD7">
+                                <rect key="frame" x="77" y="554" width="220" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-4S-Fyd">
+                                <rect key="frame" x="77" y="242" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CV8-hY-Xix"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.92878693342208862" green="0.94462335109710693" blue="0.97779244184494019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lM0-Rm-jh0" firstAttribute="centerX" secondItem="LZS-PW-BD7" secondAttribute="centerX" id="8Tx-dd-Tov"/>
-                            <constraint firstItem="bPC-4S-Fyd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="178" id="CEh-Bb-PUv"/>
-                            <constraint firstItem="bPC-4S-Fyd" firstAttribute="leading" secondItem="7a3-Aw-ElI" secondAttribute="leading" id="D4q-hD-OVF"/>
-                            <constraint firstItem="7a3-Aw-ElI" firstAttribute="top" secondItem="bPC-4S-Fyd" secondAttribute="bottom" constant="8" symbolic="YES" id="Gv4-oN-144"/>
-                            <constraint firstItem="7a3-Aw-ElI" firstAttribute="centerX" secondItem="lM0-Rm-jh0" secondAttribute="centerX" id="PIE-0C-kEL"/>
-                            <constraint firstItem="lM0-Rm-jh0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SBT-nw-lUL"/>
-                            <constraint firstItem="lM0-Rm-jh0" firstAttribute="top" secondItem="7a3-Aw-ElI" secondAttribute="bottom" constant="8" symbolic="YES" id="SF4-Q9-go4"/>
-                            <constraint firstItem="bPC-4S-Fyd" firstAttribute="trailing" secondItem="7a3-Aw-ElI" secondAttribute="trailing" id="VUX-ZW-22y"/>
-                            <constraint firstItem="LZS-PW-BD7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="i98-fw-ZfG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LZS-PW-BD7" secondAttribute="bottom" constant="92" id="lGX-rB-ei4"/>
-                            <constraint firstItem="LZS-PW-BD7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s5S-ud-LUk"/>
+                            <constraint firstItem="7a3-Aw-ElI" firstAttribute="leading" secondItem="lM0-Rm-jh0" secondAttribute="leading" id="6MW-Oq-toB"/>
+                            <constraint firstItem="lM0-Rm-jh0" firstAttribute="trailing" secondItem="LZS-PW-BD7" secondAttribute="trailing" constant="1" id="A44-NS-da8"/>
+                            <constraint firstItem="lM0-Rm-jh0" firstAttribute="top" secondItem="7a3-Aw-ElI" secondAttribute="bottom" constant="8" symbolic="YES" id="DqK-zd-eXL"/>
+                            <constraint firstItem="bPC-4S-Fyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="JmE-fw-Z61"/>
+                            <constraint firstItem="bPC-4S-Fyd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="178" id="KNf-ty-rVh"/>
+                            <constraint firstItem="7a3-Aw-ElI" firstAttribute="trailing" secondItem="lM0-Rm-jh0" secondAttribute="trailing" constant="-1" id="Kye-ZK-iAz"/>
+                            <constraint firstItem="bPC-4S-Fyd" firstAttribute="leading" secondItem="7a3-Aw-ElI" secondAttribute="leading" id="My4-hZ-NdA"/>
+                            <constraint firstItem="bPC-4S-Fyd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ppo-kA-X0n"/>
+                            <constraint firstItem="7a3-Aw-ElI" firstAttribute="top" secondItem="bPC-4S-Fyd" secondAttribute="bottom" constant="8" symbolic="YES" id="bMB-5S-Ly8"/>
+                            <constraint firstItem="lM0-Rm-jh0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ff8-Kg-DLX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LZS-PW-BD7" secondAttribute="bottom" constant="91" id="mZE-Qf-YzD"/>
+                            <constraint firstItem="lM0-Rm-jh0" firstAttribute="leading" secondItem="LZS-PW-BD7" secondAttribute="leading" id="x6p-Uo-I3x"/>
+                            <constraint firstItem="bPC-4S-Fyd" firstAttribute="trailing" secondItem="7a3-Aw-ElI" secondAttribute="trailing" id="zmt-Mq-Qn9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Price Calc" id="s7s-Eg-c3u"/>
                     <connections>
+                        <outlet property="calculateButton" destination="lM0-Rm-jh0" id="Thk-Cs-8Ct"/>
                         <outlet property="itemPrice" destination="bPC-4S-Fyd" id="Wzp-ZQ-17H"/>
                         <outlet property="itemWeight" destination="7a3-Aw-ElI" id="AIw-H3-m2L"/>
                         <outlet property="resultLabel" destination="LZS-PW-BD7" id="Nyy-8Y-fvV"/>
