@@ -10,16 +10,39 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var model = Calculate(price: 0, weight: 0)
+    var model = Calculate()
     
     @IBOutlet weak var itemPrice: UITextField!
     @IBOutlet weak var itemWeight: UITextField!
     @IBOutlet weak var calculateButton: UIButton!
     
     
+    
+    
     @IBAction func calculateValue(_ sender: UIButton) {
-        showToast(model.getValue(price: Float32(itemPrice.text!)!, weight: Float32(itemWeight.text!)!))
-//        resultLabel.text = model.getValue(price: Float32(itemPrice.text!)!, weight: Float32(itemWeight.text!)!)
+        if model.price == 0 || model.weight == 0 {
+            getAlert()
+        } else {
+            showToast(model.getValue(price: model.price, weight: model.weight))
+        }
+    }
+    
+    fileprivate func getAlert() {
+        let alert = UIAlertController(title: "Alert", message: "Enter input parameters", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                print("default")
+                
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+                
+                
+            }}))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -27,7 +50,7 @@ class ViewController: UIViewController {
         
         calculateButton.layer.cornerRadius = 10
         calculateButton.clipsToBounds = true
-
+        
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -59,8 +82,8 @@ class ViewController: UIViewController {
             }
         }
     }
-
-
+    
+    
 }
 
 extension ViewController {
@@ -88,10 +111,19 @@ extension ViewController: UITextFieldDelegate {
             itemWeight.becomeFirstResponder()
         } else if textField == itemWeight {
             textField.resignFirstResponder()
-            
         }
         return false
     }
     
-//    textF
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == itemPrice {
+            model.price = Double(itemPrice.text!) ?? 0.0
+            print("Price set up is \(model.price)")
+        }
+        if textField == itemWeight {
+            model.weight = Double(itemWeight.text!) ?? 0.0
+            print("Weight set up is \(model.weight)")
+        }
+    }
+
 }

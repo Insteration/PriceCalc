@@ -9,17 +9,16 @@
 import Foundation
 
 struct Calculate {
-    let price: Float32
-    let weight: Float32
+    var price = 0.0
+    var weight = 0.0
     
-    init(price: Float32, weight: Float32) {
-        self.price = price
-        self.weight = weight
-    }
-    
-    func getValue(price: Float32, weight: Float32) -> String {
+    func getValue(price: Double, weight: Double) -> String {
         let itemValue = (price / 1000) * weight
         return String(format: "%.2f", itemValue)
     }
+    
+//    func setup(itemPrice: String, itemWeight: String) -> (Double, Double) {
+//        return (Double(itemPrice), Double(itemWeight))
+//    }
     
 }
