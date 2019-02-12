@@ -65,13 +65,13 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func showToast(_ message: String) {
-        let toastFrame = CGRect(x: self.view.frame.size.width / 2 - 150, y: self.view.frame.size.height - 400, width: 300, height: 100)
+        let toastFrame = CGRect(x: self.view.frame.size.width / 2 - 150, y: self.view.frame.size.height - 400, width: 300, height: 80)
         let toastLabel = UILabel(frame: toastFrame)
         toastLabel.numberOfLines = 0
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = .white
         toastLabel.textAlignment = .center
-        toastLabel.text = message
+        toastLabel.text = message + " " + "UAH"
         toastLabel.alpha = 1
         toastLabel.layer.cornerRadius = 10
         toastLabel.clipsToBounds = true

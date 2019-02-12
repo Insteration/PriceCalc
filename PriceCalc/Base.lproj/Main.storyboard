@@ -18,14 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7a3-Aw-ElI">
-                                <rect key="frame" x="77" y="280" width="220" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7a3-Aw-ElI">
+                                <rect key="frame" x="77" y="280" width="221" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="WJI-5B-IXa"/>
                                     <constraint firstAttribute="height" constant="30" id="iSl-zX-gpF"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM0-Rm-jh0">
                                 <rect key="frame" x="77" y="318" width="222" height="30"/>
@@ -39,14 +40,15 @@
                                     <action selector="calculateValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhL-Dc-wzE"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-4S-Fyd">
-                                <rect key="frame" x="77" y="242" width="220" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-4S-Fyd">
+                                <rect key="frame" x="77" y="242" width="221" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CV8-hY-Xix"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="MQV-Zq-wyg"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.92878693342208862" green="0.94462335109710693" blue="0.97779244184494019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
