@@ -24,9 +24,43 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        itemPrice.delegate = self
+        itemWeight.delegate = self
+    }
+    
+    @objc fileprivate func dismissKeyboard() {
+        view.endEditing(true)
     }
 
 
 }
 
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == itemPrice {
+            textField.resignFirstResponder()
+            itemWeight.becomeFirstResponder()
+        } else if textField == itemWeight {
+            textField.resignFirstResponder()
+            
+        }
+        return false
+    }
+    
+//    textF
+}
+
+//if textField == userTextField[0] {
+//    textField.resignFirstResponder()
+//    userTextField[1].becomeFirstResponder()
+//} else if textField == userTextField[1] {
+//    textField.resignFirstResponder()
+//    if dataMethods.emailPasswordCheckOnEmpty(userTextField[1].text!) {
+//        performAction()
+//    }
+//}
+//return false
