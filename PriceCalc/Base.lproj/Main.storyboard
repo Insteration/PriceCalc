@@ -39,12 +39,6 @@
                                     <action selector="calculateValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhL-Dc-wzE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZS-PW-BD7">
-                                <rect key="frame" x="77" y="554" width="220" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-4S-Fyd">
                                 <rect key="frame" x="77" y="242" width="220" height="30"/>
                                 <constraints>
@@ -58,7 +52,6 @@
                         <color key="backgroundColor" red="0.92878693342208862" green="0.94462335109710693" blue="0.97779244184494019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7a3-Aw-ElI" firstAttribute="leading" secondItem="lM0-Rm-jh0" secondAttribute="leading" id="6MW-Oq-toB"/>
-                            <constraint firstItem="lM0-Rm-jh0" firstAttribute="trailing" secondItem="LZS-PW-BD7" secondAttribute="trailing" constant="1" id="A44-NS-da8"/>
                             <constraint firstItem="lM0-Rm-jh0" firstAttribute="top" secondItem="7a3-Aw-ElI" secondAttribute="bottom" constant="8" symbolic="YES" id="DqK-zd-eXL"/>
                             <constraint firstItem="bPC-4S-Fyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="JmE-fw-Z61"/>
                             <constraint firstItem="bPC-4S-Fyd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="178" id="KNf-ty-rVh"/>
@@ -67,8 +60,6 @@
                             <constraint firstItem="bPC-4S-Fyd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ppo-kA-X0n"/>
                             <constraint firstItem="7a3-Aw-ElI" firstAttribute="top" secondItem="bPC-4S-Fyd" secondAttribute="bottom" constant="8" symbolic="YES" id="bMB-5S-Ly8"/>
                             <constraint firstItem="lM0-Rm-jh0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ff8-Kg-DLX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LZS-PW-BD7" secondAttribute="bottom" constant="91" id="mZE-Qf-YzD"/>
-                            <constraint firstItem="lM0-Rm-jh0" firstAttribute="leading" secondItem="LZS-PW-BD7" secondAttribute="leading" id="x6p-Uo-I3x"/>
                             <constraint firstItem="bPC-4S-Fyd" firstAttribute="trailing" secondItem="7a3-Aw-ElI" secondAttribute="trailing" id="zmt-Mq-Qn9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -78,7 +69,6 @@
                         <outlet property="calculateButton" destination="lM0-Rm-jh0" id="Thk-Cs-8Ct"/>
                         <outlet property="itemPrice" destination="bPC-4S-Fyd" id="Wzp-ZQ-17H"/>
                         <outlet property="itemWeight" destination="7a3-Aw-ElI" id="AIw-H3-m2L"/>
-                        <outlet property="resultLabel" destination="LZS-PW-BD7" id="Nyy-8Y-fvV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

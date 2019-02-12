@@ -19,7 +19,7 @@ struct Calculate {
     
     func getValue(price: Float32, weight: Float32) -> String {
         let itemValue = (price / 1000) * weight
-        return String(itemValue)
+        return String(format: "%.2f", itemValue)
     }
     
 }
