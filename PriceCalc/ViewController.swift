@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var itemPrice: UITextField!
+    @IBOutlet weak var itemWeight: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    @IBAction func calculateValue(_ sender: UIButton) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
