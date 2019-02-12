@@ -50,7 +50,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92878693342208862" green="0.94462335109710693" blue="0.97779244184494019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lM0-Rm-jh0" firstAttribute="centerX" secondItem="LZS-PW-BD7" secondAttribute="centerX" id="8Tx-dd-Tov"/>
                             <constraint firstItem="bPC-4S-Fyd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="178" id="CEh-Bb-PUv"/>

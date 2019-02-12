@@ -12,8 +12,14 @@ struct Calculate {
     let price: Float32
     let weight: Float32
     
-    func getValue(price: Float32, weight: Float32) -> Float32 {
-        
-        return 0
+    init(price: Float32, weight: Float32) {
+        self.price = price
+        self.weight = weight
     }
+    
+    func getValue(price: Float32, weight: Float32) -> String {
+        let itemValue = (price / 1000) * weight
+        return String(itemValue)
+    }
+    
 }
