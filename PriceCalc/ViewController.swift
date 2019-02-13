@@ -15,33 +15,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var itemPrice: UITextField!
     @IBOutlet weak var itemWeight: UITextField!
     @IBOutlet weak var calculateButton: UIButton!
-    
-    
-    
     @IBAction func calculateValue(_ sender: UIButton) {
         if model.price == 0 || model.weight == 0 {
             getAlert()
         } else {
-
+            
             showToast(model.getValue(price: model.price, weight: model.weight))
         }
     }
     
-    fileprivate func getAlert() {
-        let alert = UIAlertController(title: "Alert", message: "Please enter the required parameters", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-            switch action.style{
-            case .default:
-                print("default")
-                
-            case .cancel:
-                print("cancel")
-                
-            case .destructive:
-                print("destructive")
-                
-                
-            }}))
+    private func getAlert() {
+        let alert = UIAlertController(title: "Alert",
+                                      message: "Please enter the required parameters",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default,
+                                      handler: { action in
+        }))
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -55,8 +45,12 @@ class ViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(notification:)),
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(notification:)),
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
         
         itemPrice.delegate = self
         itemWeight.delegate = self
@@ -87,7 +81,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
-    func showToast(_ message: String) {
+    private func showToast(_ message: String) {
         let toastFrame = CGRect(x: self.view.frame.size.width / 2 - 150, y: self.view.frame.size.height - 400, width: 300, height: 80)
         let toastLabel = UILabel(frame: toastFrame)
         toastLabel.numberOfLines = 0
@@ -130,5 +124,5 @@ extension ViewController: UITextFieldDelegate {
             print("Weight set up is \(model.weight)")
         }
     }
-
+    
 }
