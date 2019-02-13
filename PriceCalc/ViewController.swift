@@ -18,17 +18,17 @@ class ViewController: UIViewController {
     
     
     
-    
     @IBAction func calculateValue(_ sender: UIButton) {
         if model.price == 0 || model.weight == 0 {
             getAlert()
         } else {
+
             showToast(model.getValue(price: model.price, weight: model.weight))
         }
     }
     
     fileprivate func getAlert() {
-        let alert = UIAlertController(title: "Alert", message: "Enter input parameters", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Alert", message: "Please enter the required parameters", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style{
             case .default:
@@ -94,7 +94,7 @@ extension ViewController {
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = .white
         toastLabel.textAlignment = .center
-        toastLabel.text = message + " " + "UAH"
+        toastLabel.text = "Price will be" + " " + message + " " + "UAH"
         toastLabel.alpha = 1
         toastLabel.layer.cornerRadius = 10
         toastLabel.clipsToBounds = true
@@ -111,6 +111,11 @@ extension ViewController: UITextFieldDelegate {
             itemWeight.becomeFirstResponder()
         } else if textField == itemWeight {
             textField.resignFirstResponder()
+            if model.price == 0 || model.weight == 0 {
+                getAlert()
+            } else {
+                showToast(model.getValue(price: model.price, weight: model.weight))
+            }
         }
         return false
     }

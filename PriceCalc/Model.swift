@@ -16,9 +16,4 @@ struct Calculate {
         let itemValue = (price / 1000) * weight
         return String(format: "%.2f", itemValue)
     }
-    
-//    func setup(itemPrice: String, itemWeight: String) -> (Double, Double) {
-//        return (Double(itemPrice), Double(itemWeight))
-//    }
-    
 }
