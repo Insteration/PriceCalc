@@ -34,12 +34,11 @@ struct Calculate {
         if firstItemValue > secondItemValue {
             finalResult = "\(String(format: "%.2f", firstItemValue)) more than \(String(format: "%.2f", secondItemValue))"
         } else if firstItemValue < secondItemValue {
-            finalResult = "\(String(format: "%.2f", firstItemValue)) little than \(String(format: "%.2f", secondItemValue))"
+            finalResult = "Первый товар с ценой \(String(format: "%.2f", firstItemValue)) за килограмм меньше, чем второй товар с ценой \(String(format: "%.2f", secondItemValue)) за килограмм"
         } else if firstItemValue == secondItemValue {
             finalResult = "\(String(format: "%.2f", firstItemValue)) == \(String(format: "%.2f", secondItemValue))"
         }
         
-//        return String(format: "%.2f", finalResult)
         return finalResult
     }
 }

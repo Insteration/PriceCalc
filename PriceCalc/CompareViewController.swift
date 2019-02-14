@@ -116,10 +116,11 @@ extension CompareViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
             secondItemWeight.becomeFirstResponder()
         } else if textField == secondItemWeight {
-            if model.price == 0 || model.weight == 0 {
+            textField.resignFirstResponder()
+            if model.price == 0 || model.weight == 0 || model.secondWeight == 0 || model.secondPrice == 0 {
                 getAlert()
             } else {
-                showToast(model.getComparePricePerKilogram(firstPrice: model.price, firstWeight: model.weight, secondPrice: model.secondPrice, secondWeight: model.secondPrice))
+                showToast(model.getComparePricePerKilogram(firstPrice: model.price, firstWeight: model.weight, secondPrice: model.secondPrice, secondWeight: model.secondWeight))
             }
         }
         return false
