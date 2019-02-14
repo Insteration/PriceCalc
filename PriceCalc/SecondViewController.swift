@@ -1,17 +1,17 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  PriceCalc
 //
-//  Created by Artem Karmaz on 2/12/19.
+//  Created by Artem Karmaz on 2/14/19.
 //  Copyright © 2019 Artem Karmaz. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
     
     var model = Calculate()
-    
+
     @IBOutlet weak var itemPrice: UITextField!
     @IBOutlet weak var itemWeight: UITextField!
     @IBOutlet weak var calculateButton: UIButton!
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
             getAlert()
         } else {
             
-            showToast(model.getPricePerWeight(price: model.price, weight: model.weight))
+            showToast(model.getPricePerKilogram(price: model.price, weight: model.weight))
         }
     }
     
@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         
         itemPrice.delegate = self
         itemWeight.delegate = self
+        // Do any additional setup after loading the view.
     }
     
     @objc fileprivate func dismissKeyboard() {
@@ -76,11 +77,21 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
 
-extension ViewController {
+
+extension SecondViewController {
     private func showToast(_ message: String) {
         let toastFrame = CGRect(x: self.view.frame.size.width / 2 - 150, y: self.view.frame.size.height - 400, width: 300, height: 80)
         let toastLabel = UILabel(frame: toastFrame)
@@ -98,7 +109,7 @@ extension ViewController {
 }
 
 
-extension ViewController: UITextFieldDelegate {
+extension SecondViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == itemPrice {
             textField.resignFirstResponder()
@@ -108,7 +119,7 @@ extension ViewController: UITextFieldDelegate {
             if model.price == 0 || model.weight == 0 {
                 getAlert()
             } else {
-                showToast(model.getPricePerWeight(price: model.price, weight: model.weight))
+                showToast(model.getPricePerKilogram(price: model.price, weight: model.weight))
             }
         }
         return false
