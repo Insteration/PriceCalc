@@ -24,6 +24,10 @@ class SecondViewController: UIViewController {
         }
     }
     
+    @IBAction func backToMainMenu(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     private func getAlert() {
         let alert = UIAlertController(title: "Alert",
                                       message: "Please enter the required parameters",

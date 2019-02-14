@@ -1,29 +1,22 @@
 //
-//  ViewController.swift
+//  CompareViewController.swift
 //  PriceCalc
 //
-//  Created by Artem Karmaz on 2/12/19.
+//  Created by Artem Karmaz on 2/14/19.
 //  Copyright © 2019 Artem Karmaz. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class CompareViewController: UIViewController {
     
     var model = Calculate()
     
-    @IBOutlet weak var itemPrice: UITextField!
-    @IBOutlet weak var itemWeight: UITextField!
-    @IBOutlet weak var calculateButton: UIButton!
-    @IBAction func calculateValue(_ sender: UIButton) {
-        if model.price == 0 || model.weight == 0 {
-            getAlert()
-        } else {
-            
-            showToast(model.getPricePerWeight(price: model.price, weight: model.weight))
-        }
-    }
-    
+    @IBOutlet weak var firstItemPrice: UITextField!
+    @IBOutlet weak var firstItemWeight: UITextField!
+    @IBOutlet weak var secondItemPrice: UITextField!
+    @IBOutlet weak var secondItemWeight: UITextField!
+
     @IBAction func backToMainMenu(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -42,10 +35,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        calculateButton.layer.cornerRadius = 10
-        calculateButton.clipsToBounds = true
-        
-        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -56,8 +45,11 @@ class ViewController: UIViewController {
                                                selector: #selector(keyboardWillHide(notification:)),
                                                name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        itemPrice.delegate = self
-        itemWeight.delegate = self
+        firstItemPrice.delegate = self
+        firstItemWeight.delegate = self
+        secondItemPrice.delegate = self
+        secondItemWeight.delegate = self
+        // Do any additional setup after loading the view.
     }
     
     @objc fileprivate func dismissKeyboard() {
@@ -80,11 +72,21 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
 
-extension ViewController {
+
+extension CompareViewController {
     private func showToast(_ message: String) {
         let toastFrame = CGRect(x: self.view.frame.size.width / 2 - 150, y: self.view.frame.size.height - 400, width: 300, height: 80)
         let toastLabel = UILabel(frame: toastFrame)
@@ -92,7 +94,7 @@ extension ViewController {
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = .white
         toastLabel.textAlignment = .center
-        toastLabel.text = "Price will be" + " " + message + " " + "UAH"
+        toastLabel.text = message
         toastLabel.alpha = 1
         toastLabel.layer.cornerRadius = 10
         toastLabel.clipsToBounds = true
@@ -102,31 +104,43 @@ extension ViewController {
 }
 
 
-extension ViewController: UITextFieldDelegate {
+extension CompareViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == itemPrice {
+        if textField == firstItemPrice {
             textField.resignFirstResponder()
-            itemWeight.becomeFirstResponder()
-        } else if textField == itemWeight {
+            firstItemWeight.becomeFirstResponder()
+        } else if textField == firstItemWeight {
             textField.resignFirstResponder()
+            secondItemPrice.becomeFirstResponder()
+        } else if textField == secondItemPrice {
+            textField.resignFirstResponder()
+            secondItemWeight.becomeFirstResponder()
+        } else if textField == secondItemWeight {
             if model.price == 0 || model.weight == 0 {
                 getAlert()
             } else {
-                showToast(model.getPricePerWeight(price: model.price, weight: model.weight))
+                showToast(model.getComparePricePerKilogram(firstPrice: model.price, firstWeight: model.weight, secondPrice: model.secondPrice, secondWeight: model.secondPrice))
             }
         }
         return false
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == itemPrice {
-            model.price = Double(itemPrice.text!) ?? 0.0
+        if textField == firstItemPrice {
+            model.price = Double(firstItemPrice.text!) ?? 0.0
             print("Price set up is \(model.price)")
         }
-        if textField == itemWeight {
-            model.weight = Double(itemWeight.text!) ?? 0.0
+        if textField == firstItemWeight {
+            model.weight = Double(firstItemWeight.text!) ?? 0.0
             print("Weight set up is \(model.weight)")
         }
+        if textField == secondItemPrice {
+            model.secondPrice = Double(secondItemPrice.text!) ?? 0.0
+            print("Second price set up is \(model.secondPrice)")
+        }
+        if textField == secondItemWeight {
+            model.secondWeight = Double(secondItemWeight.text!) ?? 0.0
+            print("Second weight set up is \(model.secondWeight)")
+        }
     }
-    
 }

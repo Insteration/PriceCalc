@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D919C2CE2215F0780006FE09 /* CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919C2CD2215F0780006FE09 /* CompareViewController.swift */; };
 		D9C177402215804B00384D26 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1773F2215804B00384D26 /* SecondViewController.swift */; };
 		D9F73B2F22134CE5005CCF6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F73B2E22134CE5005CCF6D /* AppDelegate.swift */; };
 		D9F73B3122134CE5005CCF6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F73B3022134CE5005CCF6D /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D919C2CD2215F0780006FE09 /* CompareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareViewController.swift; sourceTree = "<group>"; };
 		D9C1773F2215804B00384D26 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D9F73B2B22134CE5005CCF6D /* PriceCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PriceCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F73B2E22134CE5005CCF6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				D9C1773F2215804B00384D26 /* SecondViewController.swift */,
 				D9F73B402213500E005CCF6D /* Model.swift */,
 				D9F73B3222134CE5005CCF6D /* Main.storyboard */,
+				D919C2CD2215F0780006FE09 /* CompareViewController.swift */,
 				D9F73B3522134CE6005CCF6D /* Assets.xcassets */,
 				D9F73B3722134CE6005CCF6D /* LaunchScreen.storyboard */,
 				D9F73B3A22134CE6005CCF6D /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				D9C177402215804B00384D26 /* SecondViewController.swift in Sources */,
 				D9F73B412213500E005CCF6D /* Model.swift in Sources */,
+				D919C2CE2215F0780006FE09 /* CompareViewController.swift in Sources */,
 				D9F73B3122134CE5005CCF6D /* ViewController.swift in Sources */,
 				D9F73B2F22134CE5005CCF6D /* AppDelegate.swift in Sources */,
 			);

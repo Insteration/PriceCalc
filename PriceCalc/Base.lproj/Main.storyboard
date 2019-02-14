@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XwO-2l-BZT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xNq-y4-Qim">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7a3-Aw-ElI">
-                                <rect key="frame" x="94" y="148" width="187" height="30"/>
+                                <rect key="frame" x="94" y="192" width="187" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XSW-Qa-IoM"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-4S-Fyd">
-                                <rect key="frame" x="94" y="110" width="187" height="30"/>
+                                <rect key="frame" x="94" y="154" width="187" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Yjr-gM-JPK"/>
                                 </constraints>
@@ -37,7 +37,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM0-Rm-jh0">
-                                <rect key="frame" x="94" y="186" width="187" height="30"/>
+                                <rect key="frame" x="94" y="230" width="187" height="30"/>
                                 <color key="backgroundColor" red="0.74005955457687378" green="0.80838888883590698" blue="0.93579632043838501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="btM-UL-Sn9"/>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.92878693342208862" green="0.94462335109710693" blue="0.97779244184494019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lM0-Rm-jh0" secondAttribute="trailing" constant="94" id="3kU-rm-MTu"/>
                             <constraint firstItem="bPC-4S-Fyd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="8I7-Ju-wVI"/>
@@ -63,8 +63,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="QKZ-l5-FP9"/>
-                    <navigationItem key="navigationItem" title="Price Calc" id="s7s-Eg-c3u"/>
+                    <navigationItem key="navigationItem" title="Price Calc" id="s7s-Eg-c3u">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="zLQ-3y-w4G">
+                            <connections>
+                                <action selector="backToMainMenu:" destination="BYZ-38-t0r" id="NDQ-Ef-hGY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="calculateButton" destination="lM0-Rm-jh0" id="Thk-Cs-8Ct"/>
                         <outlet property="itemPrice" destination="bPC-4S-Fyd" id="Wzp-ZQ-17H"/>
@@ -73,9 +78,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1240.8" y="-613.04347826086962"/>
+            <point key="canvasLocation" x="1134" y="-1280"/>
         </scene>
-        <!--Item-->
+        <!--Compares-->
+        <scene sceneID="phW-nx-ssv">
+            <objects>
+                <viewController id="oNd-bz-G9a" customClass="CompareViewController" customModule="PriceCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D1i-Rh-Axr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pwh-iq-KC6">
+                                <rect key="frame" x="94" y="184" width="187" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DYe-Sr-oKS">
+                                <rect key="frame" x="94" y="146" width="187" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOg-u4-lF7">
+                                <rect key="frame" x="94" y="260" width="187" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" smartDashesType="no" smartQuotesType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G62-A0-dtR">
+                                <rect key="frame" x="94" y="222" width="187" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DYe-Sr-oKS" firstAttribute="centerX" secondItem="D1i-Rh-Axr" secondAttribute="centerX" id="7TY-T6-Pqp"/>
+                            <constraint firstItem="Pwh-iq-KC6" firstAttribute="top" secondItem="DYe-Sr-oKS" secondAttribute="bottom" constant="8" symbolic="YES" id="9vE-Rm-U6A"/>
+                            <constraint firstItem="DYe-Sr-oKS" firstAttribute="trailing" secondItem="Pwh-iq-KC6" secondAttribute="trailing" id="DA0-f9-7B9"/>
+                            <constraint firstItem="Pwh-iq-KC6" firstAttribute="leading" secondItem="G62-A0-dtR" secondAttribute="leading" id="Hmf-Z2-bMV"/>
+                            <constraint firstItem="DYe-Sr-oKS" firstAttribute="leading" secondItem="AFs-b5-tyF" secondAttribute="leading" constant="94" id="I45-Lo-LzV"/>
+                            <constraint firstItem="HOg-u4-lF7" firstAttribute="top" secondItem="G62-A0-dtR" secondAttribute="bottom" constant="8" symbolic="YES" id="S07-eo-EvA"/>
+                            <constraint firstItem="G62-A0-dtR" firstAttribute="leading" secondItem="HOg-u4-lF7" secondAttribute="leading" id="dd5-d3-CHH"/>
+                            <constraint firstItem="DYe-Sr-oKS" firstAttribute="leading" secondItem="Pwh-iq-KC6" secondAttribute="leading" id="fEw-24-49u"/>
+                            <constraint firstItem="DYe-Sr-oKS" firstAttribute="top" secondItem="AFs-b5-tyF" secondAttribute="top" constant="82" id="h5X-RD-be1"/>
+                            <constraint firstItem="Pwh-iq-KC6" firstAttribute="trailing" secondItem="G62-A0-dtR" secondAttribute="trailing" id="mQn-8E-LtY"/>
+                            <constraint firstItem="G62-A0-dtR" firstAttribute="trailing" secondItem="HOg-u4-lF7" secondAttribute="trailing" id="p2B-zM-Eaf"/>
+                            <constraint firstItem="G62-A0-dtR" firstAttribute="top" secondItem="Pwh-iq-KC6" secondAttribute="bottom" constant="8" symbolic="YES" id="upz-eT-H6s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AFs-b5-tyF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Compares" id="oKr-bl-ykL">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Jqr-fW-1Sj">
+                            <connections>
+                                <action selector="backToMainMenu:" destination="oNd-bz-G9a" id="EYF-eb-uYx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="firstItemPrice" destination="DYe-Sr-oKS" id="Izm-MH-UCo"/>
+                        <outlet property="firstItemWeight" destination="Pwh-iq-KC6" id="g6u-Bp-el4"/>
+                        <outlet property="secondItemPrice" destination="G62-A0-dtR" id="lCV-gV-w25"/>
+                        <outlet property="secondItemWeight" destination="HOg-u4-lF7" id="DLL-0n-nIj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdf-BC-nn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="338"/>
+        </scene>
+        <!--Price-->
         <scene sceneID="znY-fB-09o">
             <objects>
                 <viewController id="Own-Qt-823" customClass="SecondViewController" customModule="PriceCalc" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,19 +157,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TNO-3B-V7W">
-                                <rect key="frame" x="94" y="150" width="187" height="30"/>
+                                <rect key="frame" x="94" y="194" width="187" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alH-eG-qqR">
-                                <rect key="frame" x="94" y="112" width="187" height="30"/>
+                                <rect key="frame" x="94" y="156" width="187" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpD-SP-Ja7">
-                                <rect key="frame" x="94" y="188" width="187" height="30"/>
+                                <rect key="frame" x="94" y="232" width="187" height="30"/>
                                 <color key="backgroundColor" red="0.74005955459999995" green="0.80838888880000004" blue="0.93579632040000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.92878693339999996" green="0.94462335109999995" blue="0.97779244180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calc"/>
@@ -120,7 +193,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bTM-b9-6qc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="3yf-fD-8gX"/>
+                    <navigationItem key="navigationItem" title="Price" id="AxG-Qy-CbY">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="K8M-LF-7z8">
+                            <connections>
+                                <action selector="backToMainMenu:" destination="Own-Qt-823" id="XSQ-9C-53L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="calculateButton" destination="KpD-SP-Ja7" id="2ue-Hm-icH"/>
                         <outlet property="itemPrice" destination="alH-eG-qqR" id="Jdh-fP-cOM"/>
@@ -129,25 +208,121 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qly-Bz-xg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2025" y="-613"/>
+            <point key="canvasLocation" x="1134" y="-475"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="8Hj-EU-Wlz">
+        <!--View Controller-->
+        <scene sceneID="psy-DL-aIn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XwO-2l-BZT" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ck4-Sz-rK8">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="U1z-p2-fwr"/>
-                        <segue destination="Own-Qt-823" kind="relationship" relationship="viewControllers" id="pDf-st-HJ9"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1U1-gi-gyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="xNq-y4-Qim" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KN3-xv-mU4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="P6p-IK-3z7">
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sn-iq-3gO">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="182.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="scale-2"/>
+                                        <connections>
+                                            <segue destination="we5-mx-faz" kind="show" id="Dwx-g4-GNr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtu-xc-PW3">
+                                        <rect key="frame" x="0.0" y="222.5" width="343" height="182"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="balance"/>
+                                        <connections>
+                                            <segue destination="GkF-4h-nb5" kind="show" id="opn-gj-SO5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjU-Li-JKQ">
+                                        <rect key="frame" x="0.0" y="444.5" width="343" height="182.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="scale"/>
+                                        <connections>
+                                            <segue destination="w9l-dl-ytQ" kind="show" id="Jrf-bE-gYC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P6p-IK-3z7" firstAttribute="trailing" secondItem="KN3-xv-mU4" secondAttribute="trailingMargin" id="eCf-qd-GS1"/>
+                            <constraint firstItem="P6p-IK-3z7" firstAttribute="top" secondItem="7v2-MY-qXy" secondAttribute="top" id="gCZ-la-0ah"/>
+                            <constraint firstAttribute="bottom" secondItem="P6p-IK-3z7" secondAttribute="bottom" constant="20" symbolic="YES" id="hVJ-xk-naI"/>
+                            <constraint firstItem="P6p-IK-3z7" firstAttribute="leading" secondItem="KN3-xv-mU4" secondAttribute="leadingMargin" id="l8V-lQ-4xU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7v2-MY-qXy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8V-fD-vvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301.60000000000002" y="-613.04347826086962"/>
+            <point key="canvasLocation" x="-767.20000000000005" y="-613.04347826086962"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="cGd-Ie-OcO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GkF-4h-nb5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Xpg-zJ-yZg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8rO-ZK-uGR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oNd-bz-G9a" kind="relationship" relationship="rootViewController" id="OLL-mb-719"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2d-Yl-8Cx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="338"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="erZ-SW-IaA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="we5-mx-faz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="QKZ-l5-FP9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZAa-UP-K8S">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fwz-5g-edF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sI3-FF-Yqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="-1279"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Uan-Gm-jev">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w9l-dl-ytQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3yf-fD-8gX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PIC-bq-0De">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Own-Qt-823" kind="relationship" relationship="rootViewController" id="s86-Vr-UDq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xba-lY-5Gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="-475"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="balance" width="192" height="192"/>
+        <image name="scale" width="192" height="192"/>
+        <image name="scale-2" width="192" height="192"/>
+    </resources>
 </document>
