@@ -10,11 +10,7 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
     
-    private enum Segue {
-        static let calculator = "Calculator"
-        static let compare = "Compare"
-    }
-    
+
     let storage = Storage()
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,7 +42,7 @@ class MainTableViewController: UITableViewController {
         
         
         let font = UIFont.preferredFont(forTextStyle: .headline)
-        let textColor = UIColor(displayP3Red: 0.458, green: 0.175, blue: 0.831, alpha: 1.0)
+        let textColor = UIColor(red: 0.175, green: 0.458, blue: 0.831, alpha: 1.0)
         let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: font, .textEffect: NSAttributedString.TextEffectStyle.letterpressStyle]
         let attributedString = NSAttributedString(string: storage.mainMenu[indexPath.row], attributes: attributes)
         cell.textLabel?.attributedText = attributedString
@@ -59,69 +55,70 @@ class MainTableViewController: UITableViewController {
         print("You tapped cell number \(indexPath.row).")
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let compare = segue.destination as? ViewController else { return }
-        guard let calculator = segue.destination as? CompareViewController else { return }
-        
-        if Segue.compare == segue.identifier {
-            
-        } else if Segue.calculator == segue.identifier {
-            if let path = tableView.indexPathForSelectedRow {
-                calculator.storage.mainMenu = [storage.mainMenu[path.row]]
-            }
-        }
-        
-        
-        //            if let path = tableView.indexPathForSelectedRow {
-        //                calculator.storage = storage.mainMenu[path.row]
-        //            }
-        //            tableView.indexPathForSelectedRow
-    }
-
-
-/*
- // Override to support conditional editing of the table view.
- override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
- // Return false if you do not want the specified item to be editable.
- return true
- }
- */
-
-/*
- // Override to support editing the table view.
- override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
- if editingStyle == .delete {
- // Delete the row from the data source
- tableView.deleteRows(at: [indexPath], with: .fade)
- } else if editingStyle == .insert {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
- 
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
- // Return false if you do not want the item to be re-orderable.
- return true
- }
- */
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */
-
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        //        guard let goToCompare = segue.destination as? ViewController else { return }
+//        //        guard let calculator = segue.destination as? CompareViewController else { return }
+//        
+//        if Segue.compare == segue.identifier {
+//            
+//        } else if Segue.calculator == segue.identifier {
+//            
+//            
+//        }
+//        
+//        //        let viewController:ViewController = segue!.destinationViewController as ViewController
+//        //        let indexPath = self.tableView.indexPathForSelectedRow()
+//        //        viewController.pinCode = self.exams[indexPath.row]
+//        //            if let path = tableView.indexPathForSelectedRow {
+//        //                calculator.storage = storage.mainMenu[path.row]
+//        //            }
+//        //            tableView.indexPathForSelectedRow
+//    }
+    
+    
+    /*
+     // Override to support conditional editing of the table view.
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
+    /*
+     // Override to support editing the table view.
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+     // Delete the row from the data source
+     tableView.deleteRows(at: [indexPath], with: .fade)
+     } else if editingStyle == .insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
+    /*
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
+    /*
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

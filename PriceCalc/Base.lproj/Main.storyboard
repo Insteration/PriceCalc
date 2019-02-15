@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IoX-ty-yHR">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PriceCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7a3-Aw-ElI">
-                                <rect key="frame" x="94" y="192" width="187" height="30"/>
+                                <rect key="frame" x="94" y="216" width="226" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XSW-Qa-IoM"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-4S-Fyd">
-                                <rect key="frame" x="94" y="154" width="187" height="30"/>
+                                <rect key="frame" x="94" y="178" width="226" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Yjr-gM-JPK"/>
                                 </constraints>
@@ -37,7 +37,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM0-Rm-jh0">
-                                <rect key="frame" x="94" y="230" width="187" height="30"/>
+                                <rect key="frame" x="94" y="254" width="226" height="30"/>
                                 <color key="backgroundColor" red="0.74005955457687378" green="0.80838888883590698" blue="0.93579632043838501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="btM-UL-Sn9"/>
@@ -63,13 +63,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Price Calc" id="s7s-Eg-c3u">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="zLQ-3y-w4G">
-                            <connections>
-                                <action selector="backToMainMenu:" destination="BYZ-38-t0r" id="NDQ-Ef-hGY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Price Calc" id="s7s-Eg-c3u"/>
                     <connections>
                         <outlet property="calculateButton" destination="lM0-Rm-jh0" id="Thk-Cs-8Ct"/>
                         <outlet property="itemPrice" destination="bPC-4S-Fyd" id="Wzp-ZQ-17H"/>
@@ -85,29 +79,29 @@
             <objects>
                 <viewController id="oNd-bz-G9a" customClass="CompareViewController" customModule="PriceCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D1i-Rh-Axr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pwh-iq-KC6">
-                                <rect key="frame" x="94" y="184" width="187" height="30"/>
+                                <rect key="frame" x="94" y="208" width="226" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DYe-Sr-oKS">
-                                <rect key="frame" x="94" y="146" width="187" height="30"/>
+                                <rect key="frame" x="94" y="170" width="226" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOg-u4-lF7">
-                                <rect key="frame" x="94" y="260" width="187" height="30"/>
+                                <rect key="frame" x="94" y="284" width="226" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G62-A0-dtR">
-                                <rect key="frame" x="94" y="222" width="187" height="30"/>
+                                <rect key="frame" x="94" y="246" width="226" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
@@ -130,9 +124,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AFs-b5-tyF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Compares" id="oKr-bl-ykL">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="Jqr-fW-1Sj"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Compares" id="oKr-bl-ykL"/>
                     <connections>
                         <outlet property="firstItemPrice" destination="DYe-Sr-oKS" id="Izm-MH-UCo"/>
                         <outlet property="firstItemWeight" destination="Pwh-iq-KC6" id="g6u-Bp-el4"/>
@@ -142,30 +134,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdf-BC-nn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="454"/>
+            <point key="canvasLocation" x="598" y="480"/>
         </scene>
         <!--Price-->
         <scene sceneID="znY-fB-09o">
             <objects>
                 <viewController id="Own-Qt-823" customClass="SecondViewController" customModule="PriceCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yfp-hH-y5Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TNO-3B-V7W">
-                                <rect key="frame" x="94" y="150" width="187" height="30"/>
+                                <rect key="frame" x="94" y="174" width="226" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alH-eG-qqR">
-                                <rect key="frame" x="94" y="112" width="187" height="30"/>
+                                <rect key="frame" x="94" y="136" width="226" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpD-SP-Ja7">
-                                <rect key="frame" x="94" y="188" width="187" height="30"/>
+                                <rect key="frame" x="94" y="212" width="226" height="30"/>
                                 <color key="backgroundColor" red="0.74005955459999995" green="0.80838888880000004" blue="0.93579632040000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.92878693339999996" green="0.94462335109999995" blue="0.97779244180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calc"/>
@@ -211,19 +203,23 @@
             <objects>
                 <tableViewController id="MYE-Pm-UwY" customClass="MainTableViewController" customModule="PriceCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YrM-9q-yY4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kisspng-slavs-gopnik-ukrainians-russian-squat-5aeabb1fd2f611.9623455815253327678641" id="lw3-wb-his">
+                            <rect key="frame" x="0.0" y="72" width="414" height="736"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="blf-ZC-97T">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="blf-ZC-97T" id="VrC-NP-Xyo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="Calculator" trigger="accessoryAction" id="4kb-rJ-rAg"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="TtB-ON-c7k"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -233,16 +229,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Main Menu" id="pAY-QA-4Qj">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="XrK-Yu-YB6">
+                        <barButtonItem key="leftBarButtonItem" image="information-3" id="am3-3R-g0U"/>
+                        <barButtonItem key="rightBarButtonItem" image="balance" id="XrK-Yu-YB6">
                             <connections>
-                                <segue destination="oNd-bz-G9a" kind="show" identifier="Compare" id="92K-JJ-Yxb"/>
+                                <segue destination="oNd-bz-G9a" kind="show" id="FDI-lv-D8j"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KO2-k7-6k7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-415.19999999999999" y="129.98500749625188"/>
+            <point key="canvasLocation" x="-415.94202898550731" y="129.91071428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fC0-vr-yps">
@@ -250,7 +247,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IoX-ty-yHR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lN0-l7-WWf">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -263,4 +260,9 @@
             <point key="canvasLocation" x="-1354.4000000000001" y="129.98500749625188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="balance" width="24" height="24"/>
+        <image name="information-3" width="24" height="24"/>
+        <image name="kisspng-slavs-gopnik-ukrainians-russian-squat-5aeabb1fd2f611.9623455815253327678641" width="800" height="793"/>
+    </resources>
 </document>
