@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var model = Calculate()
+    var storage = Storage()
     
     @IBOutlet weak var itemPrice: UITextField!
     @IBOutlet weak var itemWeight: UITextField!

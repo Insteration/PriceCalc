@@ -11,15 +11,16 @@ import UIKit
 class CompareViewController: UIViewController {
     
     var model = Calculate()
+    var storage = Storage()
     
     @IBOutlet weak var firstItemPrice: UITextField!
     @IBOutlet weak var firstItemWeight: UITextField!
     @IBOutlet weak var secondItemPrice: UITextField!
     @IBOutlet weak var secondItemWeight: UITextField!
 
-    @IBAction func backToMainMenu(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func backToMainMenu(_ sender: UIBarButtonItem) {
+//        dismiss(animated: true, completion: nil)
+//    }
     
     private func getAlert() {
         let alert = UIAlertController(title: "Alert",
