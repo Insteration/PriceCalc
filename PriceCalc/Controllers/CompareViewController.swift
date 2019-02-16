@@ -20,28 +20,24 @@ class CompareViewController: UIViewController {
     @IBOutlet weak var secondItemWeight: UITextField!
     @IBOutlet weak var changeCalculateFormula: UISwitch!
     
-    
-//    private func calculateValue() {
-//        if data.price == 0 || data.weight == 0 {
-//            getAlert()
-//        } else {
-//            if Data.changeValue == 0 {
-//                showToast(model.getPricePerWeight(price: data.price, weight: data.weight))
-//            } else {
-//                showToast(model.getPricePerKilogram(price: data.price, weight: data.weight))
-//            }
-//        }
-//    }
+    @IBAction func setupCalculateFormula(_ sender: UISwitch) {
+        if changeCalculateFormula.isOn {
+            showToast("Formula set up on PER KILO")
+        } else {
+            showToast("Formula set up on PER GRAMM")
+        }
+    }
     
     private func calculateValue() {
         if data.price == 0 || data.weight == 0 || data.secondWeight == 0 || data.secondPrice == 0 {
             getAlert()
         } else {
             if changeCalculateFormula.isOn {
-                            showToast(model.getComparePricePerKilogram(firstPrice: data.price, firstWeight: data.weight, secondPrice: data.secondPrice, secondWeight: data.secondWeight))
+                showToast(model.comparePrice(itemValueOne: model.getPricePerKilogram(price: data.price, weight: data.weight), itemValueTwo: model.getPricePerKilogram(price: data.secondPrice, weight: data.secondWeight)))
                 print("CALCULATE BY GET COMPARE PRICE PER KILOGRAM")
             } else {
-                
+                showToast(model.comparePrice(itemValueOne: model.getPricePerWeight(price: data.price, weight: data.weight), itemValueTwo: model.getPricePerWeight(price: data.secondPrice, weight: data.secondWeight)))
+                print("CALCULATE BY GET COMPARE PRICE PER WEIGHT")
             }
 
         }
@@ -131,7 +127,7 @@ extension CompareViewController: UITextFieldDelegate {
             secondItemWeight.becomeFirstResponder()
         } else if textField == secondItemWeight {
             textField.resignFirstResponder()
-           
+           calculateValue() 
         }
         return false
     }

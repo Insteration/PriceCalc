@@ -194,6 +194,9 @@
                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="hKQ-7e-n2V">
                                 <rect key="frame" x="308" y="6.5" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="setupCalculateFormula:" destination="oNd-bz-G9a" eventType="valueChanged" id="kd2-6h-D09"/>
+                                </connections>
                             </switch>
                         </barButtonItem>
                     </navigationItem>
