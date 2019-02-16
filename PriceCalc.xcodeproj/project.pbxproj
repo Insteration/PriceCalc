@@ -11,7 +11,7 @@
 		D919C32A22180DE70006FE09 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919C32922180DE70006FE09 /* Storage.swift */; };
 		D919C32C22180E2E0006FE09 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919C32B22180E2E0006FE09 /* MainTableViewController.swift */; };
 		D9F73B2F22134CE5005CCF6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F73B2E22134CE5005CCF6D /* AppDelegate.swift */; };
-		D9F73B3122134CE5005CCF6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F73B3022134CE5005CCF6D /* ViewController.swift */; };
+		D9F73B3122134CE5005CCF6D /* PriceCalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F73B3022134CE5005CCF6D /* PriceCalculateViewController.swift */; };
 		D9F73B3422134CE5005CCF6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F73B3222134CE5005CCF6D /* Main.storyboard */; };
 		D9F73B3622134CE6005CCF6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F73B3522134CE6005CCF6D /* Assets.xcassets */; };
 		D9F73B3922134CE6005CCF6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F73B3722134CE6005CCF6D /* LaunchScreen.storyboard */; };
@@ -24,7 +24,7 @@
 		D919C32B22180E2E0006FE09 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		D9F73B2B22134CE5005CCF6D /* PriceCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PriceCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F73B2E22134CE5005CCF6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9F73B3022134CE5005CCF6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9F73B3022134CE5005CCF6D /* PriceCalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalculateViewController.swift; sourceTree = "<group>"; };
 		D9F73B3322134CE5005CCF6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9F73B3522134CE6005CCF6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9F73B3822134CE6005CCF6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,8 +55,8 @@
 		D919C32E221811380006FE09 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D9F73B3022134CE5005CCF6D /* ViewController.swift */,
 				D919C32B22180E2E0006FE09 /* MainTableViewController.swift */,
+				D9F73B3022134CE5005CCF6D /* PriceCalculateViewController.swift */,
 				D919C2CD2215F0780006FE09 /* CompareViewController.swift */,
 			);
 			path = Controllers;
@@ -173,7 +173,7 @@
 			files = (
 				D9F73B412213500E005CCF6D /* Model.swift in Sources */,
 				D919C2CE2215F0780006FE09 /* CompareViewController.swift in Sources */,
-				D9F73B3122134CE5005CCF6D /* ViewController.swift in Sources */,
+				D9F73B3122134CE5005CCF6D /* PriceCalculateViewController.swift in Sources */,
 				D9F73B2F22134CE5005CCF6D /* AppDelegate.swift in Sources */,
 				D919C32A22180DE70006FE09 /* Storage.swift in Sources */,
 				D919C32C22180E2E0006FE09 /* MainTableViewController.swift in Sources */,

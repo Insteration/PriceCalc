@@ -53,7 +53,7 @@ class MainTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
-        Storage.changeValue = indexPath.row
+        Data.changeValue = indexPath.row
     }
 
 }

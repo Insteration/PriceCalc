@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PriceCalculateViewController: UIViewController {
     
     var model = Calculate()
     var storage = Storage()
+    var data = Data()
     
     @IBOutlet weak var itemPrice: UITextField!
     @IBOutlet weak var itemWeight: UITextField!
@@ -20,13 +21,13 @@ class ViewController: UIViewController {
         calculateValue()
     }
     private func calculateValue() {
-        if model.price == 0 || model.weight == 0 {
+        if data.price == 0 || data.weight == 0 {
             getAlert()
         } else {
-            if Storage.changeValue == 0 {
-                showToast(model.getPricePerWeight(price: model.price, weight: model.weight))
+            if Data.changeValue == 0 {
+                showToast(model.getPricePerWeight(price: data.price, weight: data.weight))
             } else {
-                showToast(model.getPricePerKilogram(price: model.price, weight: model.weight))
+                showToast(model.getPricePerKilogram(price: data.price, weight: data.weight))
             }
         }
     }
@@ -86,7 +87,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController {
+extension PriceCalculateViewController {
     private func showToast(_ message: String) {
         let toastFrame = CGRect(x: self.view.frame.size.width / 2 - 150, y: self.view.frame.size.height - 400, width: 300, height: 80)
         let toastLabel = UILabel(frame: toastFrame)
@@ -94,7 +95,7 @@ extension ViewController {
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = .white
         toastLabel.textAlignment = .center
-        if Storage.changeValue == 0 {
+        if Data.changeValue == 0 {
             toastLabel.text = "Price will be" + " " + message + " " + "UAH"
         } else {
             toastLabel.text = "Price will be" + " " + message + " " + "UAH"
@@ -108,7 +109,7 @@ extension ViewController {
 }
 
 
-extension ViewController: UITextFieldDelegate {
+extension PriceCalculateViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == itemPrice {
             textField.resignFirstResponder()
@@ -122,12 +123,12 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == itemPrice {
-            model.price = Double(itemPrice.text!) ?? 0.0
-            print("Price set up is \(model.price)")
+            data.price = Double(itemPrice.text!) ?? 0.0
+            print("Price set up is \(data.price)")
         }
         if textField == itemWeight {
-            model.weight = Double(itemWeight.text!) ?? 0.0
-            print("Weight set up is \(model.weight)")
+            data.weight = Double(itemWeight.text!) ?? 0.0
+            print("Weight set up is \(data.weight)")
         }
     }
     

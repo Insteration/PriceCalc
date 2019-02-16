@@ -9,11 +9,6 @@
 import Foundation
 
 struct Calculate {
-    var price = 0.0
-    var weight = 0.0
-    var secondPrice = 0.0
-    var secondWeight = 0.0
-    
     func getPricePerWeight(price: Double, weight: Double) -> String {
         let itemValue = (price / 1000) * weight
         return String(format: "%.2f", itemValue)

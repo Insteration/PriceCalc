@@ -12,15 +12,12 @@ class CompareViewController: UIViewController {
     
     var model = Calculate()
     var storage = Storage()
+    var data = Data()
     
     @IBOutlet weak var firstItemPrice: UITextField!
     @IBOutlet weak var firstItemWeight: UITextField!
     @IBOutlet weak var secondItemPrice: UITextField!
     @IBOutlet weak var secondItemWeight: UITextField!
-
-//    @IBAction func backToMainMenu(_ sender: UIBarButtonItem) {
-//        dismiss(animated: true, completion: nil)
-//    }
     
     private func getAlert() {
         let alert = UIAlertController(title: "Alert",
@@ -50,7 +47,6 @@ class CompareViewController: UIViewController {
         firstItemWeight.delegate = self
         secondItemPrice.delegate = self
         secondItemWeight.delegate = self
-        // Do any additional setup after loading the view.
     }
     
     @objc fileprivate func dismissKeyboard() {
@@ -73,17 +69,6 @@ class CompareViewController: UIViewController {
             }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
@@ -118,10 +103,10 @@ extension CompareViewController: UITextFieldDelegate {
             secondItemWeight.becomeFirstResponder()
         } else if textField == secondItemWeight {
             textField.resignFirstResponder()
-            if model.price == 0 || model.weight == 0 || model.secondWeight == 0 || model.secondPrice == 0 {
+            if data.price == 0 || data.weight == 0 || data.secondWeight == 0 || data.secondPrice == 0 {
                 getAlert()
             } else {
-                showToast(model.getComparePricePerKilogram(firstPrice: model.price, firstWeight: model.weight, secondPrice: model.secondPrice, secondWeight: model.secondWeight))
+                showToast(model.getComparePricePerKilogram(firstPrice: data.price, firstWeight: data.weight, secondPrice: data.secondPrice, secondWeight: data.secondWeight))
             }
         }
         return false
@@ -129,20 +114,20 @@ extension CompareViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == firstItemPrice {
-            model.price = Double(firstItemPrice.text!) ?? 0.0
-            print("Price set up is \(model.price)")
+            data.price = Double(firstItemPrice.text!) ?? 0.0
+            print("Price set up is \(data.price)")
         }
         if textField == firstItemWeight {
-            model.weight = Double(firstItemWeight.text!) ?? 0.0
-            print("Weight set up is \(model.weight)")
+            data.weight = Double(firstItemWeight.text!) ?? 0.0
+            print("Weight set up is \(data.weight)")
         }
         if textField == secondItemPrice {
-            model.secondPrice = Double(secondItemPrice.text!) ?? 0.0
-            print("Second price set up is \(model.secondPrice)")
+            data.secondPrice = Double(secondItemPrice.text!) ?? 0.0
+            print("Second price set up is \(data.secondPrice)")
         }
         if textField == secondItemWeight {
-            model.secondWeight = Double(secondItemWeight.text!) ?? 0.0
-            print("Second weight set up is \(model.secondWeight)")
+            data.secondWeight = Double(secondItemWeight.text!) ?? 0.0
+            print("Second weight set up is \(data.secondWeight)")
         }
     }
 }
