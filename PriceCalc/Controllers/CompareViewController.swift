@@ -79,7 +79,7 @@ class CompareViewController: UIViewController, Calculate, Compare {
     @objc func keyboardWillShow(notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height / 8
+                self.view.frame.origin.y -= keyboardSize.height / 12
             }
         }
         
@@ -88,7 +88,7 @@ class CompareViewController: UIViewController, Calculate, Compare {
     @objc func keyboardWillHide(notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y += keyboardSize.height / 8
+                self.view.frame.origin.y += keyboardSize.height / 12
             }
         }
     }
