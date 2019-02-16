@@ -8,7 +8,13 @@
 
 import Foundation
 
-struct Calculate {
+protocol Calculate {
+}
+
+protocol Compare {
+}
+
+extension Calculate {
     func getPricePerWeight(price: Double, weight: Double) -> String {
         let itemValue = (price / 1000) * weight
         return String(format: "%.2f", itemValue)
@@ -18,7 +24,10 @@ struct Calculate {
         let itemValue = (price / weight) * 1000
         return String(format: "%.2f", itemValue)
     }
-    
+}
+
+extension Compare {
+        
     func comparePrice(itemValueOne: String, itemValueTwo: String) -> String {
         var compare = String()
         if itemValueOne > itemValueTwo {
@@ -31,4 +40,3 @@ struct Calculate {
         return compare
     }
 }
-

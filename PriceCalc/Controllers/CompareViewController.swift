@@ -8,9 +8,8 @@
 
 import UIKit
 
-class CompareViewController: UIViewController {
+class CompareViewController: UIViewController, Calculate, Compare {
     
-    var model = Calculate()
     var storage = Storage()
     var data = Data()
     
@@ -33,10 +32,10 @@ class CompareViewController: UIViewController {
             getAlert()
         } else {
             if changeCalculateFormula.isOn {
-                showToast(model.comparePrice(itemValueOne: model.getPricePerKilogram(price: data.price, weight: data.weight), itemValueTwo: model.getPricePerKilogram(price: data.secondPrice, weight: data.secondWeight)))
+                showToast(comparePrice(itemValueOne: getPricePerKilogram(price: data.price, weight: data.weight), itemValueTwo: getPricePerKilogram(price: data.secondPrice, weight: data.secondWeight)))
                 print("CALCULATE BY GET COMPARE PRICE PER KILOGRAM")
             } else {
-                showToast(model.comparePrice(itemValueOne: model.getPricePerWeight(price: data.price, weight: data.weight), itemValueTwo: model.getPricePerWeight(price: data.secondPrice, weight: data.secondWeight)))
+                showToast(comparePrice(itemValueOne: getPricePerWeight(price: data.price, weight: data.weight), itemValueTwo: getPricePerWeight(price: data.secondPrice, weight: data.secondWeight)))
                 print("CALCULATE BY GET COMPARE PRICE PER WEIGHT")
             }
 

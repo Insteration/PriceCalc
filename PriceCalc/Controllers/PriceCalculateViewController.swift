@@ -8,9 +8,8 @@
 
 import UIKit
 
-class PriceCalculateViewController: UIViewController {
+class PriceCalculateViewController: UIViewController, Calculate {
     
-    var model = Calculate()
     var storage = Storage()
     var data = Data()
     
@@ -25,9 +24,9 @@ class PriceCalculateViewController: UIViewController {
             getAlert()
         } else {
             if Data.changeValue == 0 {
-                showToast(model.getPricePerWeight(price: data.price, weight: data.weight))
+                showToast(getPricePerWeight(price: data.price, weight: data.weight))
             } else {
-                showToast(model.getPricePerKilogram(price: data.price, weight: data.weight))
+                showToast(getPricePerKilogram(price: data.price, weight: data.weight))
             }
         }
     }
