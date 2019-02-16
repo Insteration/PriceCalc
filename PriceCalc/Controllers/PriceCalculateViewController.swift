@@ -88,7 +88,7 @@ class PriceCalculateViewController: UIViewController, Calculate {
 
 extension PriceCalculateViewController {
     private func showToast(_ message: String) {
-        let toastFrame = CGRect(x: self.view.frame.size.width / 2 - 150, y: self.view.frame.size.height - 400, width: 300, height: 80)
+        let toastFrame = CGRect(x: self.view.frame.size.width / 2 - 150, y: self.view.frame.size.height / 3, width: 300, height: 80)
         let toastLabel = UILabel(frame: toastFrame)
         toastLabel.numberOfLines = 0
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
@@ -119,6 +119,7 @@ extension PriceCalculateViewController: UITextFieldDelegate {
         }
         return false
     }
+    
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == itemPrice {

@@ -54,7 +54,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NiQ-TD-mTk"/>
                                 </constraints>
-                                <color key="tintColor" red="0.92878693342208862" green="0.94462335109710693" blue="0.97779244184494019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Calc"/>
                                 <connections>
                                     <action selector="calculateValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhL-Dc-wzE"/>
@@ -231,10 +231,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <imageView key="tableFooterView" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="kisspng-slavs-gopnik-ukrainians-russian-squat-5aeabb1fd2f611.9623455815253327678641" id="lw3-wb-his">
-                            <rect key="frame" x="0.0" y="72" width="375" height="736"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="blf-ZC-97T">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -289,7 +285,6 @@
         <image name="325lcd_2" width="450" height="232"/>
         <image name="balance" width="24" height="24"/>
         <image name="information-3" width="24" height="24"/>
-        <image name="kisspng-slavs-gopnik-ukrainians-russian-squat-5aeabb1fd2f611.9623455815253327678641" width="800" height="793"/>
         <image name="soviet libra" width="360" height="420"/>
     </resources>
 </document>
