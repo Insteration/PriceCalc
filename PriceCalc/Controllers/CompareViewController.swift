@@ -18,6 +18,34 @@ class CompareViewController: UIViewController {
     @IBOutlet weak var firstItemWeight: UITextField!
     @IBOutlet weak var secondItemPrice: UITextField!
     @IBOutlet weak var secondItemWeight: UITextField!
+    @IBOutlet weak var changeCalculateFormula: UISwitch!
+    
+    
+//    private func calculateValue() {
+//        if data.price == 0 || data.weight == 0 {
+//            getAlert()
+//        } else {
+//            if Data.changeValue == 0 {
+//                showToast(model.getPricePerWeight(price: data.price, weight: data.weight))
+//            } else {
+//                showToast(model.getPricePerKilogram(price: data.price, weight: data.weight))
+//            }
+//        }
+//    }
+    
+    private func calculateValue() {
+        if data.price == 0 || data.weight == 0 || data.secondWeight == 0 || data.secondPrice == 0 {
+            getAlert()
+        } else {
+            if changeCalculateFormula.isOn {
+                            showToast(model.getComparePricePerKilogram(firstPrice: data.price, firstWeight: data.weight, secondPrice: data.secondPrice, secondWeight: data.secondWeight))
+                print("CALCULATE BY GET COMPARE PRICE PER KILOGRAM")
+            } else {
+                
+            }
+
+        }
+    }
     
     private func getAlert() {
         let alert = UIAlertController(title: "Alert",
@@ -103,11 +131,7 @@ extension CompareViewController: UITextFieldDelegate {
             secondItemWeight.becomeFirstResponder()
         } else if textField == secondItemWeight {
             textField.resignFirstResponder()
-            if data.price == 0 || data.weight == 0 || data.secondWeight == 0 || data.secondPrice == 0 {
-                getAlert()
-            } else {
-                showToast(model.getComparePricePerKilogram(firstPrice: data.price, firstWeight: data.weight, secondPrice: data.secondPrice, secondWeight: data.secondWeight))
-            }
+           
         }
         return false
     }
