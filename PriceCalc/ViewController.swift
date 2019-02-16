@@ -20,8 +20,11 @@ class ViewController: UIViewController {
         if model.price == 0 || model.weight == 0 {
             getAlert()
         } else {
-            
-            showToast(model.getPricePerWeight(price: model.price, weight: model.weight))
+            if Storage.changeValue == 0 {
+                showToast(model.getPricePerWeight(price: model.price, weight: model.weight))
+            } else {
+                showToast(model.getPricePerKilogram(price: model.price, weight: model.weight))
+            }
         }
     }
     
@@ -46,6 +49,7 @@ class ViewController: UIViewController {
         calculateButton.layer.cornerRadius = 10
         calculateButton.clipsToBounds = true
         
+        print("User choice is - \(Storage.changeValue)")
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)

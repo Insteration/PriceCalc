@@ -10,4 +10,5 @@ import Foundation
 
 struct Storage {
     var mainMenu = ["Price product (Know price per 1 kg)", "Price product (Know price fo gramms)"]
+    static var changeValue = 0
 }
