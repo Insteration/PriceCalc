@@ -15,7 +15,6 @@ struct Data {
     var secondWeight = 0.0
     
     static var changeValue = 0
-
 }
 
 struct Storage {
