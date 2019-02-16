@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var itemWeight: UITextField!
     @IBOutlet weak var calculateButton: UIButton!
     @IBAction func calculateValue(_ sender: UIButton) {
+        calculateValue()
+    }
+    private func calculateValue() {
         if model.price == 0 || model.weight == 0 {
             getAlert()
         } else {
@@ -26,10 +29,6 @@ class ViewController: UIViewController {
                 showToast(model.getPricePerKilogram(price: model.price, weight: model.weight))
             }
         }
-    }
-    
-    @IBAction func backToMainMenu(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
     }
     
     private func getAlert() {
@@ -48,8 +47,6 @@ class ViewController: UIViewController {
         
         calculateButton.layer.cornerRadius = 10
         calculateButton.clipsToBounds = true
-        
-        print("User choice is - \(Storage.changeValue)")
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -97,7 +94,11 @@ extension ViewController {
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = .white
         toastLabel.textAlignment = .center
-        toastLabel.text = "Price will be" + " " + message + " " + "UAH"
+        if Storage.changeValue == 0 {
+            toastLabel.text = "Price will be" + " " + message + " " + "UAH"
+        } else {
+            toastLabel.text = "Price will be" + " " + message + " " + "UAH"
+        }
         toastLabel.alpha = 1
         toastLabel.layer.cornerRadius = 10
         toastLabel.clipsToBounds = true
@@ -114,11 +115,7 @@ extension ViewController: UITextFieldDelegate {
             itemWeight.becomeFirstResponder()
         } else if textField == itemWeight {
             textField.resignFirstResponder()
-            if model.price == 0 || model.weight == 0 {
-                getAlert()
-            } else {
-                showToast(model.getPricePerWeight(price: model.price, weight: model.weight))
-            }
+            calculateValue()
         }
         return false
     }

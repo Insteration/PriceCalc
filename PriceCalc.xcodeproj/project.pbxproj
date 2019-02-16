@@ -43,6 +43,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D919C32D221811250006FE09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9F73B402213500E005CCF6D /* Model.swift */,
+				D919C32922180DE70006FE09 /* Storage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D919C32E221811380006FE09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9F73B3022134CE5005CCF6D /* ViewController.swift */,
+				D919C32B22180E2E0006FE09 /* MainTableViewController.swift */,
+				D919C2CD2215F0780006FE09 /* CompareViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D919C32F2218114C0006FE09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9F73B3222134CE5005CCF6D /* Main.storyboard */,
+				D9F73B3722134CE6005CCF6D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D9F73B2222134CE5005CCF6D = {
 			isa = PBXGroup;
 			children = (
@@ -63,14 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				D9F73B2E22134CE5005CCF6D /* AppDelegate.swift */,
-				D9F73B3022134CE5005CCF6D /* ViewController.swift */,
-				D9F73B402213500E005CCF6D /* Model.swift */,
-				D919C32B22180E2E0006FE09 /* MainTableViewController.swift */,
-				D9F73B3222134CE5005CCF6D /* Main.storyboard */,
-				D919C32922180DE70006FE09 /* Storage.swift */,
-				D919C2CD2215F0780006FE09 /* CompareViewController.swift */,
+				D919C32E221811380006FE09 /* Controllers */,
+				D919C32D221811250006FE09 /* Models */,
+				D919C32F2218114C0006FE09 /* Views */,
 				D9F73B3522134CE6005CCF6D /* Assets.xcassets */,
-				D9F73B3722134CE6005CCF6D /* LaunchScreen.storyboard */,
 				D9F73B3A22134CE6005CCF6D /* Info.plist */,
 			);
 			path = PriceCalc;
