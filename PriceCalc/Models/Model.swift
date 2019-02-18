@@ -9,9 +9,12 @@
 import Foundation
 
 protocol Calculate {
+    func getPricePerWeight(price: Double, weight: Double) -> String
+    func getPricePerKilogram(price: Double, weight: Double) -> String
 }
 
 protocol Compare {
+    func comparePrice(itemValueOne: String, itemValueTwo: String) -> String
 }
 
 extension Calculate {
